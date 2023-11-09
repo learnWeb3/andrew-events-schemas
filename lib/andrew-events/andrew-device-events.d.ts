@@ -19,15 +19,15 @@ export interface AndrewDeviceMetricEventData {
     timestamp: number;
     testMetric: string;
 }
-export declare class AndrewDeviceEvent extends CloudEvent<AndrewDeviceConnectEventData | AndrewDeviceDisconnectEventData | AndrewDeviceMetricEventData> {
-    constructor(type: AndrewDeviceEventType, subject: string, data: AndrewDeviceConnectEventData | AndrewDeviceDisconnectEventData | AndrewDeviceMetricEventData);
+export declare class AndrewDeviceEvent<T> extends CloudEvent<T> {
+    constructor(type: AndrewDeviceEventType, subject: string, data: T);
 }
-export declare class AndrewDeviceConnectEvent extends AndrewDeviceEvent {
+export declare class AndrewDeviceConnectEvent extends AndrewDeviceEvent<AndrewDeviceConnectEventData> {
     constructor(subject: string, data: AndrewDeviceConnectEventData);
 }
-export declare class AndrewDeviceDisconnectEvent extends AndrewDeviceEvent {
+export declare class AndrewDeviceDisconnectEvent extends AndrewDeviceEvent<AndrewDeviceDisconnectEventData> {
     constructor(subject: string, data: AndrewDeviceDisconnectEventData);
 }
-export declare class AndrewDeviceMetricEvent extends AndrewDeviceEvent {
+export declare class AndrewDeviceMetricEvent extends AndrewDeviceEvent<AndrewDeviceMetricEventData> {
     constructor(subject: string, data: AndrewDeviceMetricEventData);
 }
