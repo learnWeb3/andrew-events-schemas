@@ -1,6 +1,6 @@
 {
   "name": "andrew-events-schema",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "andrew events schema types for message bus",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -31,7 +31,7 @@
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
-    "prepare": "tsc --project tsconfig.build.json",
+    "install": "tsc --project tsconfig.build.json",
     "semantic-release": "semantic-release",
     "typecheck": "tsc --noEmit"
   },
