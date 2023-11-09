@@ -10,11 +10,20 @@ export enum AndrewDeviceEventSource {
   DEVICE = 'device',
 }
 
-export class AndrewDeviceConnectEventData {}
+export interface AndrewDeviceConnectEventData {
+  device: string;
+}
 
-export class AndrewDeviceDisconnectEventData {}
+export interface AndrewDeviceDisconnectEventData {
+  device: string;
+}
 
-export class AndrewDeviceMetricEventData {}
+export interface AndrewDeviceMetricEventData {
+  vehicle: string;
+  device: string;
+  timestamp: number;
+  testMetric: string;
+}
 
 export class AndrewDeviceEvent extends CloudEvent<
   | AndrewDeviceConnectEventData
