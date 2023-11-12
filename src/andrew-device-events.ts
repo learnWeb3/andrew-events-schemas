@@ -7,7 +7,13 @@ import {
   AndrewDeviceConnectEventData,
   AndrewDeviceDisconnectEventData,
   AndrewDeviceMetricEventData,
+  AndrewDeviceDrivingSessionEndEventData,
+  AndrewDeviceDrivingSessionStartEventData,
+  AndrewDeviceVehicleVINEventData,
   AndrewDeviceEvent,
+  AndrewDeviceDrivingSessionStartEvent,
+  AndrewDeviceDrivingSessionEndEvent,
+  AndrewDeviceVehicleVINEvent,
 } from './andrew-events/andrew-device-events';
 
 export {
@@ -15,9 +21,15 @@ export {
   AndrewDeviceConnectEvent,
   AndrewDeviceDisconnectEvent,
   AndrewDeviceMetricEvent,
+  AndrewDeviceVehicleVINEvent,
+  AndrewDeviceDrivingSessionStartEvent,
+  AndrewDeviceDrivingSessionEndEvent,
   AndrewDeviceEventSource,
   AndrewDeviceEventType,
   AndrewDeviceConnectEventData,
   AndrewDeviceDisconnectEventData,
   AndrewDeviceMetricEventData,
+  AndrewDeviceDrivingSessionEndEventData,
+  AndrewDeviceDrivingSessionStartEventData,
+  AndrewDeviceVehicleVINEventData,
 };

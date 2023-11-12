@@ -4,6 +4,9 @@ export enum AndrewDeviceEventType {
   CONNECT = 'andrew.device.connect',
   DISCONNECT = 'andrew.device.disconnect',
   METRIC = 'andrew.device.metric',
+  DRIVING_SESSION_START = 'andrew.device.driving-session-start',
+  DRIVING_SESSION_END = 'andrew.device.driving-session-end',
+  VEHICLE_VIN = 'andrew.device.vehicle-vin',
 }
 
 export enum AndrewDeviceEventSource {
@@ -23,6 +26,19 @@ export interface AndrewDeviceMetricEventData {
   device: string;
   timestamp: number;
   testMetric: string;
+}
+
+export interface AndrewDeviceDrivingSessionStartEventData {
+  device: string;
+}
+
+export interface AndrewDeviceDrivingSessionEndEventData {
+  device: string;
+}
+
+export interface AndrewDeviceVehicleVINEventData {
+  device: string;
+  vehicle: string;
 }
 
 export class AndrewDeviceEvent<T> extends CloudEvent<T> {
@@ -54,5 +70,23 @@ export class AndrewDeviceDisconnectEvent extends AndrewDeviceEvent<AndrewDeviceD
 export class AndrewDeviceMetricEvent extends AndrewDeviceEvent<AndrewDeviceMetricEventData> {
   constructor(subject: string, data: AndrewDeviceMetricEventData) {
     super(AndrewDeviceEventType.METRIC, subject, data);
+  }
+}
+
+export class AndrewDeviceDrivingSessionStartEvent extends AndrewDeviceEvent<AndrewDeviceDrivingSessionStartEventData> {
+  constructor(subject: string, data: AndrewDeviceDrivingSessionStartEventData) {
+    super(AndrewDeviceEventType.DRIVING_SESSION_START, subject, data);
+  }
+}
+
+export class AndrewDeviceDrivingSessionEndEvent extends AndrewDeviceEvent<AndrewDeviceDrivingSessionEndEventData> {
+  constructor(subject: string, data: AndrewDeviceDrivingSessionStartEventData) {
+    super(AndrewDeviceEventType.DRIVING_SESSION_END, subject, data);
+  }
+}
+
+export class AndrewDeviceVehicleVINEvent extends AndrewDeviceEvent<AndrewDeviceVehicleVINEventData> {
+  constructor(subject: string, data: AndrewDeviceVehicleVINEventData) {
+    super(AndrewDeviceEventType.DRIVING_SESSION_START, subject, data);
   }
 }
