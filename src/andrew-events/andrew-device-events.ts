@@ -7,6 +7,8 @@ export enum AndrewDeviceEventType {
   DRIVING_SESSION_START = 'andrew.device.driving-session-start',
   DRIVING_SESSION_END = 'andrew.device.driving-session-end',
   VEHICLE_VIN = 'andrew.device.vehicle-vin',
+  ACTIVATION_STATUS_REQUEST = 'andrew.device.activation-status-request',
+  ACTIVATION_STATUS_RESPONSE = 'andrew.device.activation-status-response',
 }
 
 export enum AndrewDeviceEventSource {
@@ -39,6 +41,17 @@ export interface AndrewDeviceDrivingSessionEndEventData {
 export interface AndrewDeviceVehicleVINEventData {
   device: string;
   vehicle: string;
+}
+
+export interface AndrewDeviceActivationStatusRequestEventData {
+  device: string;
+  vehicle: string;
+}
+
+export interface AndrewDeviceActivationStatusResponseEventData {
+  device: string;
+  vehicle: string;
+  status: string;
 }
 
 export class AndrewDeviceEvent<T> extends CloudEvent<T> {
@@ -88,5 +101,23 @@ export class AndrewDeviceDrivingSessionEndEvent extends AndrewDeviceEvent<Andrew
 export class AndrewDeviceVehicleVINEvent extends AndrewDeviceEvent<AndrewDeviceVehicleVINEventData> {
   constructor(subject: string, data: AndrewDeviceVehicleVINEventData) {
     super(AndrewDeviceEventType.DRIVING_SESSION_START, subject, data);
+  }
+}
+
+export class AndrewDeviceActivationStatusRequestEvent extends AndrewDeviceEvent<AndrewDeviceActivationStatusRequestEventData> {
+  constructor(
+    subject: string,
+    data: AndrewDeviceActivationStatusRequestEventData
+  ) {
+    super(AndrewDeviceEventType.ACTIVATION_STATUS_REQUEST, subject, data);
+  }
+}
+
+export class AndrewDeviceActivationStatusResponseEvent extends AndrewDeviceEvent<AndrewDeviceActivationStatusResponseEventData> {
+  constructor(
+    subject: string,
+    data: AndrewDeviceActivationStatusResponseEventData
+  ) {
+    super(AndrewDeviceEventType.ACTIVATION_STATUS_RESPONSE, subject, data);
   }
 }
