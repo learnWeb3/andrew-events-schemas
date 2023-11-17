@@ -27,7 +27,12 @@ export interface AndrewDeviceMetricEventData {
   vehicle: string;
   device: string;
   timestamp: number;
-  testMetric: string;
+  obd_data: {
+    fuel_rate: number;
+    vehicle_speed: number;
+    engine_speed: number;
+    relative_accel_pos: number;
+  };
 }
 
 export interface AndrewDeviceDrivingSessionStartEventData {
