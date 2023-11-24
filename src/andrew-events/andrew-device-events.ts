@@ -17,10 +17,12 @@ export enum AndrewDeviceEventSource {
 
 export interface AndrewDeviceConnectEventData {
   device: string;
+  vehicle: string;
 }
 
 export interface AndrewDeviceDisconnectEventData {
   device: string;
+  vehicle: string;
 }
 
 export interface AndrewDeviceMetricEventData {
@@ -37,10 +39,12 @@ export interface AndrewDeviceMetricEventData {
 
 export interface AndrewDeviceDrivingSessionStartEventData {
   device: string;
+  vehicle: string;
 }
 
 export interface AndrewDeviceDrivingSessionEndEventData {
   device: string;
+  vehicle: string;
 }
 
 export interface AndrewDeviceVehicleVINEventData {
