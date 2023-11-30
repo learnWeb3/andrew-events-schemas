@@ -1,23 +1,49 @@
 import {
+  /** GENERIC */
+  AndrewDeviceEvent,
+  AndrewDeviceEventSource,
+  AndrewDeviceEventType,
+  /** EVENTS */
   AndrewDeviceConnectEvent,
   AndrewDeviceDisconnectEvent,
   AndrewDeviceMetricEvent,
-  AndrewDeviceEventSource,
-  AndrewDeviceEventType,
+  AndrewDeviceVehicleVINEvent,
+  AndrewDeviceDrivingSessionStartEvent,
+  AndrewDeviceDrivingSessionEndEvent,
+  AndrewDeviceActivationStatusRequestEvent,
+  AndrewDeviceActivationStatusResponseEvent,
+  /** PAYLOAD */
   AndrewDeviceConnectEventData,
   AndrewDeviceDisconnectEventData,
   AndrewDeviceMetricEventData,
-  AndrewDeviceEvent,
+  AndrewDeviceDrivingSessionEndEventData,
+  AndrewDeviceDrivingSessionStartEventData,
+  AndrewDeviceVehicleVINEventData,
+  AndrewDeviceActivationStatusRequestEventData,
+  AndrewDeviceActivationStatusResponseEventData,
 } from './andrew-events/andrew-device-events';
 
 export {
+  /** GENERIC */
   AndrewDeviceEvent,
+  AndrewDeviceEventSource,
+  AndrewDeviceEventType,
+  /** EVENTS */
   AndrewDeviceConnectEvent,
   AndrewDeviceDisconnectEvent,
   AndrewDeviceMetricEvent,
-  AndrewDeviceEventSource,
-  AndrewDeviceEventType,
+  AndrewDeviceVehicleVINEvent,
+  AndrewDeviceDrivingSessionStartEvent,
+  AndrewDeviceDrivingSessionEndEvent,
+  AndrewDeviceActivationStatusRequestEvent,
+  AndrewDeviceActivationStatusResponseEvent,
+  /** PAYLOAD */
   AndrewDeviceConnectEventData,
   AndrewDeviceDisconnectEventData,
   AndrewDeviceMetricEventData,
+  AndrewDeviceDrivingSessionEndEventData,
+  AndrewDeviceDrivingSessionStartEventData,
+  AndrewDeviceVehicleVINEventData,
+  AndrewDeviceActivationStatusRequestEventData,
+  AndrewDeviceActivationStatusResponseEventData,
 };
