@@ -1,9 +1,7 @@
 import {
-  /** GENERIC */
   AndrewDeviceEvent,
   AndrewDeviceEventSource,
   AndrewDeviceEventType,
-  /** EVENTS */
   AndrewDeviceConnectEvent,
   AndrewDeviceDisconnectEvent,
   AndrewDeviceMetricEvent,
@@ -12,7 +10,6 @@ import {
   AndrewDeviceVehicleVINEvent,
   AndrewDeviceActivationStatusRequestEvent,
   AndrewDeviceActivationStatusResponseEvent,
-  /** PAYLOAD */
   AndrewDeviceConnectEventData,
   AndrewDeviceDisconnectEventData,
   AndrewDeviceMetricEventData,
@@ -24,11 +21,9 @@ import {
 } from './andrew-events/andrew-device-events';
 
 export {
-  /** GENERIC */
   AndrewDeviceEvent,
   AndrewDeviceEventSource,
   AndrewDeviceEventType,
-  /** EVENTS */
   AndrewDeviceConnectEvent,
   AndrewDeviceDisconnectEvent,
   AndrewDeviceMetricEvent,
@@ -37,7 +32,6 @@ export {
   AndrewDeviceDrivingSessionEndEvent,
   AndrewDeviceActivationStatusRequestEvent,
   AndrewDeviceActivationStatusResponseEvent,
-  /** PAYLOAD */
   AndrewDeviceConnectEventData,
   AndrewDeviceDisconnectEventData,
   AndrewDeviceMetricEventData,
