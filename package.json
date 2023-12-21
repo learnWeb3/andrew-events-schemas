@@ -1,6 +1,6 @@
 {
   "name": "andrew-events-schema",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "andrew events schema types for message bus",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -24,6 +24,11 @@
       "import": "./lib/andrew-device-events.js",
       "require": "./lib/andrew-device-events.js",
       "types": "./lib/andrew-device-events.d.ts"
+    },
+    "./andrew-ecommerce-events": {
+      "import": "./lib/andrew-ecommerce-events.js",
+      "require": "./lib/andrew-ecommerce-events.js",
+      "types": "./lib/andrew-ecommerce-events.d.ts"
     }
   },
   "scripts": {

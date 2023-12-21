@@ -20,6 +20,16 @@ import {
   AndrewDeviceActivationStatusResponseEventData,
 } from './andrew-events/andrew-device-events';
 
+import {
+  AndrewEcommerceEventSource,
+  AndrewEcommerceEventType,
+  AndrewEcommerceEvent,
+  AndrewEcommerceCheckoutCompletedEventData,
+  AndrewEcommerceCheckoutCompletedEvent,
+  AndrewEcommerceCheckoutCanceledEventData,
+  AndrewEcommerceCheckoutCanceledEvent,
+} from './andrew-events/andrew-ecommerce-events';
+
 export {
   AndrewDeviceEvent,
   AndrewDeviceEventSource,
@@ -40,4 +50,11 @@ export {
   AndrewDeviceVehicleVINEventData,
   AndrewDeviceActivationStatusRequestEventData,
   AndrewDeviceActivationStatusResponseEventData,
+  AndrewEcommerceEventSource,
+  AndrewEcommerceEventType,
+  AndrewEcommerceEvent,
+  AndrewEcommerceCheckoutCompletedEventData,
+  AndrewEcommerceCheckoutCompletedEvent,
+  AndrewEcommerceCheckoutCanceledEventData,
+  AndrewEcommerceCheckoutCanceledEvent,
 };
