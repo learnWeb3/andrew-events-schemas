@@ -28,6 +28,7 @@ import {
   AndrewEcommerceCheckoutCompletedEvent,
   AndrewEcommerceCheckoutCanceledEventData,
   AndrewEcommerceCheckoutCanceledEvent,
+  EcommerceGateway,
 } from './andrew-events/andrew-ecommerce-events';
 
 export {
@@ -57,4 +58,5 @@ export {
   AndrewEcommerceCheckoutCompletedEvent,
   AndrewEcommerceCheckoutCanceledEventData,
   AndrewEcommerceCheckoutCanceledEvent,
+  EcommerceGateway,
 };
