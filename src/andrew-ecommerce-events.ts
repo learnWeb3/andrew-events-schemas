@@ -6,6 +6,11 @@ import {
   AndrewEcommerceCheckoutCompletedEvent,
   AndrewEcommerceCheckoutCanceledEventData,
   AndrewEcommerceCheckoutCanceledEvent,
+  AndrewEcommerceSubscriptionCanceledEventData,
+  AndrewEcommerceSubscriptionCanceledEvent,
+  AndrewEcommerceSubscriptionErrorEventData,
+  AndrewEcommerceSubscriptionErrorEvent,
+  AndrewEcommerceSubscriptionErrorType,
   EcommerceGateway,
 } from './andrew-events/andrew-ecommerce-events';
 
@@ -17,5 +22,10 @@ export {
   AndrewEcommerceCheckoutCompletedEvent,
   AndrewEcommerceCheckoutCanceledEventData,
   AndrewEcommerceCheckoutCanceledEvent,
+  AndrewEcommerceSubscriptionCanceledEventData,
+  AndrewEcommerceSubscriptionCanceledEvent,
+  AndrewEcommerceSubscriptionErrorEventData,
+  AndrewEcommerceSubscriptionErrorEvent,
+  AndrewEcommerceSubscriptionErrorType,
   EcommerceGateway,
 };

@@ -3,6 +3,8 @@ import { CloudEvent } from 'cloudevents';
 export enum AndrewEcommerceEventType {
   CHECKOUT_COMPLETED = 'ndrew.ecommerce.checkout.completed',
   CHECKOUT_CANCELED = 'andrew.ecommerce.checkout.canceled',
+  SUBSCRIPTION_CANCELED = 'andrew.ecommerce.subscription.canceled',
+  SUBSCRIPTION_ERROR = 'andrew.ecommerce.subscription.error',
 }
 
 export enum EcommerceGateway {
@@ -31,6 +33,7 @@ export interface AndrewEcommerceCheckoutCompletedEventData {
   customer: string;
   contract: string;
   gateway: EcommerceGateway;
+  subscription: string;
 }
 
 export class AndrewEcommerceCheckoutCompletedEvent extends AndrewEcommerceEvent<AndrewEcommerceCheckoutCompletedEventData> {
@@ -51,5 +54,42 @@ export interface AndrewEcommerceCheckoutCanceledEventData {
 export class AndrewEcommerceCheckoutCanceledEvent extends AndrewEcommerceEvent<AndrewEcommerceCheckoutCanceledEventData> {
   constructor(subject: string, data: AndrewEcommerceCheckoutCanceledEventData) {
     super(AndrewEcommerceEventType.CHECKOUT_CANCELED, subject, data);
+  }
+}
+
+export interface AndrewEcommerceSubscriptionCanceledEventData {
+  customer: string;
+  contract: string;
+  gateway: EcommerceGateway;
+  subscription: string;
+}
+
+export class AndrewEcommerceSubscriptionCanceledEvent extends AndrewEcommerceEvent<AndrewEcommerceSubscriptionCanceledEventData> {
+  constructor(
+    subject: string,
+    data: AndrewEcommerceSubscriptionCanceledEventData
+  ) {
+    super(AndrewEcommerceEventType.SUBSCRIPTION_CANCELED, subject, data);
+  }
+}
+
+export enum AndrewEcommerceSubscriptionErrorType {
+  PAYMENT_ERROR = 'PAYMENT_ERROR',
+}
+
+export interface AndrewEcommerceSubscriptionErrorEventData {
+  customer: string;
+  contract: string;
+  gateway: EcommerceGateway;
+  subscription: string;
+  errorType: AndrewEcommerceSubscriptionErrorType;
+}
+
+export class AndrewEcommerceSubscriptionErrorEvent extends AndrewEcommerceEvent<AndrewEcommerceSubscriptionErrorEventData> {
+  constructor(
+    subject: string,
+    data: AndrewEcommerceSubscriptionErrorEventData
+  ) {
+    super(AndrewEcommerceEventType.SUBSCRIPTION_ERROR, subject, data);
   }
 }
